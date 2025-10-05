@@ -1,0 +1,133 @@
+╔════════════════════════════════════════════════════════════════╗
+║                    VOcadesk Quick Start Guide                  ║
+║              Offline Voice Application Launcher                ║
+╚════════════════════════════════════════════════════════════════╝
+
+📋 SETUP IN ECLIPSE (5 STEPS):
+
+1. Import Project
+   ✓ File → Import → Maven → Existing Maven Projects
+   ✓ Browse to: C:\Users\praka\eclipse-workspace\VOcadesk
+   ✓ Click Finish
+
+2. Update Maven Dependencies
+   ✓ Right-click project → Maven → Update Project
+   ✓ Check "Force Update of Snapshots/Releases"
+   ✓ Click OK
+   ✓ Wait for dependencies to download (sphinx4-core, sphinx4-data, json)
+
+3. Verify apps.json Location
+   ✓ Check that apps.json exists in project root
+   ✓ Path: C:\Users\praka\eclipse-workspace\VOcadesk\apps.json
+
+4. Connect Microphone
+   ✓ Plug in your microphone
+   ✓ Test it in Windows Voice Recorder
+
+5. Run the Application (GUI Version - Recommended)
+   ✓ Open VOcadeskMain.java
+   ✓ Right-click → Run As → Java Application
+   ✓ GUI window appears
+   ✓ Click "Start Voice Recognition" button
+   
+   OR Run Console Version:
+   ✓ Open VoiceLauncher.java
+   ✓ Right-click → Run As → Java Application
+
+═══════════════════════════════════════════════════════════════
+
+🎤 VOICE COMMANDS TO TRY:
+
+Launch Apps:
+  • "open calculator"
+  • "open notepad"
+  • "open paint"
+  • "launch explorer"
+  • "start task manager"
+
+System Commands:
+  • "list apps" - Show all available apps
+  • "help" - Show available commands
+  • "exit" - Close VOcadesk
+
+═══════════════════════════════════════════════════════════════
+
+➕ ADD YOUR OWN APPS:
+
+Edit apps.json in the project root:
+
+[
+  {
+    "name": "Calculator",
+    "path": "C:/Windows/System32/calc.exe"
+  },
+  {
+    "name": "Your App",
+    "path": "C:/Path/To/Your/App.exe"
+  }
+]
+
+Then say: "open your app"
+
+═══════════════════════════════════════════════════════════════
+
+🔧 TROUBLESHOOTING:
+
+Problem: "Failed to initialize speech recognizer"
+Fix: Right-click project → Maven → Update Project
+
+Problem: "Failed to read apps.json"
+Fix: Verify apps.json is in project root folder
+
+Problem: "Application not found"
+Fix: Check spelling in apps.json matches your voice command
+
+Problem: Microphone not working
+Fix: Check Windows microphone settings and permissions
+
+═══════════════════════════════════════════════════════════════
+
+✅ PROJECT FILES CREATED:
+
+VOcadesk/
+├── pom.xml                                  ✓ Maven config
+├── apps.json                                ✓ App registry
+├── README.md                                ✓ Full documentation
+├── GUI_GUIDE.md                             ✓ GUI usage guide
+├── ECLIPSE_SETUP.md                         ✓ Eclipse setup
+├── QUICK_START.txt                          ✓ This file
+└── src/main/java/com/vocadesk/
+    ├── VOcadeskMain.java                    ✓ Main entry (GUI)
+    ├── VocadeskGUI.java                     ✓ GUI interface
+    ├── VoiceRecognitionController.java      ✓ Voice controller
+    ├── AppLauncher.java                     ✓ App manager
+    └── VoiceLauncher.java                   ✓ Console version
+
+═══════════════════════════════════════════════════════════════
+
+🎯 KEY FEATURES:
+
+✓ 100% Offline - No internet required
+✓ Beautiful GUI - Swing-based interface with visual feedback
+✓ CMUSphinx - Industry-standard speech recognition
+✓ Fast Launch - Instant application launching
+✓ Easy Config - Simple JSON configuration
+✓ Modular Code - Clean, maintainable design
+✓ Two Modes - GUI and Console versions available
+
+═══════════════════════════════════════════════════════════════
+
+📚 NEED MORE HELP?
+
+Read the documentation:
+  • README.md - Full project documentation
+  • GUI_GUIDE.md - Complete GUI usage guide
+  • ECLIPSE_SETUP.md - Detailed Eclipse setup
+  • apps.json - Application configuration
+
+═══════════════════════════════════════════════════════════════
+
+Ready to go! 
+1. Run VOcadeskMain.java
+2. Click "Start Voice Recognition"
+3. Say "open calculator" to test! 🚀
